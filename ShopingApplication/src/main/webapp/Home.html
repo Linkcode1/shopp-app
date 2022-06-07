@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Spartan',sans-serif;
+}
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222; 
+}
+h4{
+    font-size: 20px;
+    color: #222;
+}
+h6{
+    
+    font-size: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color:transparent;
+    
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+
+}
+button.white{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+
+}
+
+body{
+    width: 100%;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 600;
+     color: #1a1a1a;
+     transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a:active{
+    color: #088178;
+}
+#navbar li a:active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#hero{
+    background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/blog_1.jpg?raw=true");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero h4{
+    padding-bottom: 15px;
+}
+#her0 h1{
+    color: #088178;
+}
+#hero button{
+    background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/button.png?raw=true");
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    font-weight: 700;
+    font-size: 15px;
+}
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.03);
+}
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178 ;
+    background-color:#fddde4 ;
+}
+#feature .fe-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+#feature .fe-box:nth-child(3) h6{
+    background-color: #cdd4f8;
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color: #f6dbf6;
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color: #fff2e5;
+}
+/**********************************/
+/*.site-blocks-2 .block-2-item {
+    display: block;
+    position: relative;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}*/
+#product1{
+    text-align: center;
+
+}
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+#product1 .pro{
+width: 23%;
+min-width: 250px;
+padding: 10px 12px;
+border: 1px solid#cce7d0;
+border-radius: 25px;
+cursor: pointer;
+box-shadow: 20px 20px 30px rgba(0,0,0, 0.02);
+margin: 15px 0;
+transition: 0.5s ease;
+position: relative;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0, 0.06);
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color:#606063;
+    font-size: 12px;
+}
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color:#1a1a1a;
+    font-size: 14px;
+}
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181,25);
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+}
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border:1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/b2.jpg?raw=true");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner h4{
+    color: #fff;
+    font-size: 16px;
+}
+#banner h2{
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+}
+#banner h2 span{
+    color: #ef3636;
+    
+}
+#banner button:hover{
+    background : #088178;
+    color: #fff;
+}
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+    background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/jeans2.jpeg?raw=true");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+#sm-banner .banner-box2{
+    background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/stylishhhh.jpeg?raw=true");
+}
+
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banner h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover button{
+    background: #088178;
+    border: 1px solid #088178;
+}
+
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+ background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/watch3.jpeg?raw=true");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2{
+    background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/Stylishimg.jpg?raw=true");
+}
+
+#banner3 .banner-box3{
+    background-image: url("https://github.com/SwatiJumde/shopping-images/blob/main/shirt1.1.jpeg?raw=true");
+}
+
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+#banner3 h3{
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("images of class project/banner/b14.png");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+}
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #818ea0;
+}
+
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+}
+#newsletter p span{
+   
+    color: #ffbd27;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25cm;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#newsletter button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-top-left-radius: 0;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+       font-size: 13px;
+       margin: 0 0 8px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+footer .install .row img{
+    border: 1px solid #088178;
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+
+</style>
+<body>
+  <!------>
+  
+  
+  
+  <section id="header">
+    <div class="site-logo">
+        <a href="index.html" class="js-logo-clone">BRANDVILLA</a>
+      </div>
+      <div>
+          <ul id="navbar">
+              <li><a class="active" href="Home.html">Home</a></li>
+              <li><a class="active" href="#product1">Topwear</a></li>
+                <li><a href="#product2">BottomWear</a></li>
+                <li><a href="fashionAccessiors">Fashion Accessories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a href="heart.html"><i class="fa fa-solid fa-heart"></i></a></li>
+                <li><a href="Login.html"><i class="fa fa-solid fa-user"></i></a></li>
+            </ul>
+         </li>  
+      </div>
+  </section>
+  <section id="hero">
+      
+      <h4>Trade-in-offer</h4>
+      <h2>Super Values Deals</h2>
+      <h1>On All Products</h1>
+      <button>Shop Now</button>
+      
+  </section>
+
+  <section id="feature" class="section-p1">
+  <div class="fe-box">
+      <img src="https://github.com/SwatiJumde/shopping-images/blob/main/f1.png?raw=true">
+      <h6>FREE SHIPPING</h6>
+  </div>
+  <div class="fe-box">
+    <img src="https://github.com/SwatiJumde/shopping-images/blob/main/f2.png?raw=true">
+    <h6>ONLINE ORDER</h6>
+</div>
+<div class="fe-box">
+    <img src="https://github.com/SwatiJumde/shopping-images/blob/main/f3.png?raw=true">
+    <h6>FREE RETURNS</h6>
+</div>
+<div class="fe-box">
+    <img src="https://github.com/SwatiJumde/shopping-images/blob/main/f4.png?raw=true">
+    <h6>HAPPY SELL</h6>
+</div>
+<div class="fe-box">
+    <img src="https://github.com/SwatiJumde/shopping-images/blob/main/f5.png?raw=true">
+    <h6>24/7 SUPPORT</h6>
+</div>
+
+</section>
+
+
+<!-------<div class="site-section site-blocks-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <a class="block-2-item" href="#">
+            <figure class="image">
+              <img src="images of class project/shirt9.jpeg" style="border:10px solid rgb(240, 100, 212)" alt="" class="img-fluid" >
+            </figure>
+            <div class="text">
+              <span class="text-uppercase">Collections</span>
+              <h3>SHIRTS</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-3">
+          <a class="block-2-item" href="#">
+            <figure class="image">
+              <img src="images of class project/tshirt1.1.jpeg" style="border: 10px solid rgb(53, 88, 201)" alt="" class="img-fluid" >
+            </figure>
+            <div class="text">
+              <span class="text-uppercase">Collections</span>
+              <h3>T-SHIRTS</h3>
+            </div>
+          </a>       
+         </div>
+
+        <div class="col-sm-3">
+          <a class="block-2-item" href="#">
+            <figure class="image">
+              <img src="images of class project/jaket2.jpeg" style="border: 10px solid rgb(181, 180, 78)" alt="" class="img-fluid" >
+            </figure>
+            <div class="text">
+              <span class="text-uppercase">Collections</span>
+              <h3>JACKET</h3>
+            </div>
+          </a>       
+         </div>
+
+         <div class="col-sm-3">
+          <a class="block-2-item" href="#">
+            <figure class="image">
+              <img src="images of class project/jacket1.jpeg" style="border: 10px solid rgb(245, 70, 76)" alt="" class="img-fluid" >
+            </figure>
+            <div class="text">
+              <span class="text-uppercase">Collections</span>
+              <h3>Stylish Products</h3>
+            </div>
+          </a>       
+         </div>--->
+
+         <section id="product1" class="section-p1">
+           <h2>FEATURED PRODUCTS</h2>
+           <P>Collections Of New Modern Design</P>
+           <div class="pro-container">
+             <div class="pro">
+               <img src="https://github.com/SwatiJumde/shopping-images/blob/main/shirt5.jpeg?raw=true">
+               <div class="des">
+                 <span>adidas</span>
+                 <h5>Cartoon Astronaut T-Shirts</h5>
+                 <div class="star">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-star"></i>
+                 </div>
+                 <h4>Rs.500</h4>
+               </div>
+               <a href="CustomerLogin.html"><i class="fa fa-shopping-cart"></i></a>
+             </div>
+             <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/jacket2.jpeg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="CustomerLogin.html"><i class="fa fa-shopping-cart "></i></a>
+            </div>
+            <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Shirt2.jpg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="CustomerLogin.html"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/shirt4.jpeg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="CustomerLogin.html"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Shirt2.jpg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="CustomerLogin.html"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/shirt9.jpeg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="CustomerLogin.html"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/shirt1.1.jpeg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="CustomerLogin.html"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+            <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/shirt2.2.jpeg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="CustomerLogin.html"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+           </div>
+         </section>
+         
+         <section id="banner" class="section-m1">
+           <h4>Repair Services</h4>
+           <h2>UPTO <span> 70% OFF</span> ALL T-SHIRT AND ACCESSORIES</h2>
+           <button class="normal">Shop Now</button>
+
+         </section>
+<!----------------------------------------------------------------------------------------->
+
+         <section id="product1" class="section-p1">
+          <h2>NEW ARRIVALS</h2>
+      
+          <div class="pro-container">
+            <div class="pro">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n1.jpg?raw=true">
+              <div class="des">
+                <span>adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs.500</h4>
+              </div>
+              <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro">
+             <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n2.jpg?raw=true">
+             <div class="des">
+               <span>adidas</span>
+               <h5>Cartoon Astronaut T-Shirts</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h4>Rs.500</h4>
+             </div>
+             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+           </div>
+           <div class="pro">
+             <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n3.jpg?raw=true">
+             <div class="des">
+               <span>adidas</span>
+               <h5>Cartoon Astronaut T-Shirts</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h4>Rs.500</h4>
+             </div>
+             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+           </div>
+           <div class="pro">
+             <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n4.jpg?raw=true">
+             <div class="des">
+               <span>adidas</span>
+               <h5>Cartoon Astronaut T-Shirts</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h4>Rs.500</h4>
+             </div>
+             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+           </div>
+           <div class="pro">
+             <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n5.jpg?raw=true">
+             <div class="des">
+               <span>adidas</span>
+               <h5>Cartoon Astronaut T-Shirts</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h4>Rs.500</h4>
+             </div>
+             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+           </div>
+           <div class="pro">
+             <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n6.jpg?raw=true">
+             <div class="des">
+               <span>adidas</span>
+               <h5>Cartoon Astronaut T-Shirts</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h4>Rs.500</h4>
+             </div>
+             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+           </div>
+           <div class="pro">
+             <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n7.jpg?raw=true">
+             <div class="des">
+               <span>adidas</span>
+               <h5>Cartoon Astronaut T-Shirts</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h4>Rs.500</h4>
+             </div>
+             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+           </div>
+           <div class="pro">
+             <img src="https://github.com/SwatiJumde/shopping-images/blob/main/Images/n8.jpg?raw=true">
+             <div class="des">
+               <span>adidas</span>
+               <h5>Cartoon Astronaut T-Shirts</h5>
+               <div class="star">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+               <h4>Rs.500</h4>
+             </div>
+             <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+           </div>
+          </div>
+        </section>
+
+         <section id="sm-banner" class="section-p1">
+           <div class="banner-box">
+             <h4>Crazy Deals</h4>
+             <h2>BUY 1 GET 1 FREE</h2>
+             <span>The Best Classic Dress Is On Sale At BRANDVILLA</span>
+             <button class="white">Learn More</button>
+           </div>
+           <div class="banner-box banner-box2">
+            <h4>Spring/Summer</h4>
+            <h2>UPCOMMING SEASON</h2>
+            <span>The Best Classic Dress Is On Sale At BRANDVILLA</span>
+            <button class="white">Collection</button>
+          </div>
+
+         </section>
+
+         <section id="banner3">
+          <div class="banner-box banner-box2">
+            
+            <h2>SEASONAL SALE</h2>
+            <h3>WINTER COLLECTION </h3>
+          
+           
+          </div>
+          <div class="banner-box banner-box3">
+            
+            <h2>T-SHIRT</h2>
+            <h3>NEW TRENDY PRINT</h3>
+          
+           
+          </div>
+          <div class="banner-box">
+            
+            <h2>BRANDED COLLECTIONS</h2>
+            <h3>NEW PATTERNS</h3>
+          
+           
+          </div>
+
+         </section>
+
+         <section id="newsletter" class="section-p1 section-m1">
+          <div class="newstext">
+            <h4>SIGN UP FOR NEWSLETTER</h4>
+            <p> Get E-mail updates about our latest shop and <span>special offers </span>.</p>
+          </div>
+          <div class="form">
+            <input type="text" placeholder="Your E-mail Address">
+            <button class="normal">SIGN UP</button>
+          </div>
+
+         </section>
+
+         <footer class="section-p1">
+           <div class="col">
+             <h4>Contact</h4>
+             <p><strong>Phone : </strong> +91 9860605387,9637342018 </p>
+             <p><strong>Address :</strong> Wagholi, pune </p>
+             <p><strong>Hours : </strong> 10:00 am - 10:pm , MON - SUN</p>
+              <div class="follow">
+                <h4>FOLLOW US</h4>
+                <div class="icon">
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-instagram"></i>
+
+                </div>
+              </div>
+           </div>
+           <div class="col">
+             <h4>About</h4>
+             <a href="#">About Us</a>
+             <a href="#">Delivery Information</a>
+             <a href="#">Privacy Policy</a>
+             <a href="#">Terms and Conditions</a>
+             <a href="#">Contact us</a>
+           </div>
+
+           <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+          </div>
+
+          <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store Or Google Play</p>
+            <div class="row">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/app.jpg?raw=true">
+              <img src="https://github.com/SwatiJumde/shopping-images/blob/main/play.jpg?raw=true">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="https://github.com/SwatiJumde/shopping-images/blob/main/pay.png?raw=true">
+          </div>
+         </footer>
+
+            
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
